@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
 
       {/* Footer */}
       <footer className="text-[#6C6C6C] text-center py-[12px] md:py-[16px] border-t border-[#E0E0E0]">
-        <p className="content">© 2025 Ölevo | All Rights Reserved.</p>
+        <p className="content">© 2025 Ölevoo | All Rights Reserved.</p>
       </footer>
     </div>
   )

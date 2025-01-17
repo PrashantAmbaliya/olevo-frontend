@@ -10,10 +10,10 @@ function Index() {
             <div>
               <h1 className="text-[30px] leading-[36px] sm:text-[36px] sm:leading-[42px] lg:text[42px] lg:leading-[48px] xl:text[48px] xl:leading-[54px] 2xl:text[60px] 2xl:leading-[66px] font-semibold text-primaryBlack">
                 Welcome to
-                <span className="!text-primaryGreen text-inherit"> Ölevo</span>
+                <span className="!text-primaryGreen text-inherit"> Ölevoo</span>
               </h1>
 
-              <p className="content mt-[15px] mb-[20px] md:mb[30px]">Ölevo connects olive oil lovers with detailed profiles, tasting notes, and personalized recommendations. Discover, track, and explore oils and pairings in one place.</p>
+              <p className="content mt-[15px] mb-[20px] md:mb[30px]">Ölevoo connects olive oil lovers with detailed profiles, tasting notes, and personalized recommendations. Discover, track, and explore oils and pairings in one place.</p>
 
               <Link
                 to="/scan"
