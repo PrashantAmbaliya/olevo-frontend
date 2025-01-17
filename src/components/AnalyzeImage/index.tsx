@@ -7,7 +7,7 @@ interface Props {
 const analyzeImage: React.FC<Props> = ({ imageUrl }) => {
   return (
     <>
-      <div>
+      <div className="aspect-[1/1] max-w-[500px] rounded-lg border-2 border-gray-300 object-cover">
         <img src={imageUrl} alt="Product Image" />
       </div>
     </>
