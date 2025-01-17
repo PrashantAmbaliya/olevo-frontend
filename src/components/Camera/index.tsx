@@ -31,11 +31,6 @@ const Camera: React.FC<CameraProps> = ({ isCameraOpen }) => {
       ImageData = imageSrc
       setUrl(imageSrc || null)
     }
-
-    try {
-    } catch (error) {
-    } finally {
-    }
   }
 
   return (
