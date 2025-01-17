@@ -1,0 +1,37 @@
+/* DetectionImage.css */
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    /* Ensures the wave stays within the image boundaries */
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.detection-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(21, 130, 255, 0.5), rgba(0, 255, 255, 0));
+    background-size: 100% 200%;
+    animation: waveEffect 1.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes waveEffect {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
