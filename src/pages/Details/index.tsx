@@ -1,9 +1,7 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
-// import "swiper/css"
-// import "swiper/css/navigation"
-// import "swiper/css/pagination"
+import "swiper/swiper-bundle.css"
 import Open from "../../assets/open.svg"
 import Slider from "../../assets/slider.jpg"
 import HomeIcon from "../../assets/home-icon.svg"
@@ -76,33 +74,45 @@ function index() {
               </div>
               <h6 className="text-primaryGreen small-title mb-[10px]">Filippo Berio</h6>
               <h1 className="title mb-[15px]">Extra Virgin Olive Oil</h1>
-              <p className="content mb-[15px] last-of-type:mb-0">
-                Filippo Berio's Extra Virgin Olive Oil is a premium-quality olive oil renowned for its rich, robust flavor and exceptional versatility. Carefully crafted from the finest olives, this oil is cold-pressed to preserve its natural taste, aroma, and nutritional properties.
-              </p>
-              <h6 className="sub-title !text-textmute mt-[15px]">Key features include:</h6>
-              <ul className="my-[15px] list-disc pl-[20px] marker:text-textmute">
-                <li className="mb-[10px]">
-                  <p className="content">A well-balanced flavor profile with fruity notes and a hint of peppery finish.</p>
-                </li>
-                <li className="mb-[10px]">
-                  <p className="content">Ideal for drizzling over salads, pasta, grilled vegetables, and bread, or as a base for dressings and marinades.</p>
-                </li>
-                <li className="mb-[10px]">
-                  <p className="content">Naturally rich in healthy monounsaturated fats and antioxidants, supporting a heart-healthy diet.</p>
-                </li>
-                <li className="mb-[10px]">
-                  <p className="content">Non-GMO and gluten-free, making it a wholesome choice for a variety of dietary needs.</p>
-                </li>
-              </ul>
-              <p className="content">Filippo Berio Extra Virgin Olive Oil is a trusted kitchen staple, celebrated by home cooks and professional chefs worldwide for its authenticity and quality.</p>
+              <div className="content-area h-full xl:h-[415px] overflow-y-auto 2xl:h-full md:pr-[16px] pr-[0]">
+                <p className="content mb-[15px] last-of-type:mb-0">
+                  Filippo Berio's Extra Virgin Olive Oil is a premium-quality olive oil renowned for its rich, robust flavor and exceptional versatility. Carefully crafted from the finest olives, this oil is cold-pressed to preserve its natural taste, aroma, and nutritional properties.
+                </p>
+                <h6 className="sub-title !text-textmute mt-[15px]">Key features include:</h6>
+                <ul className="my-[15px] list-disc pl-[20px] marker:text-textmute">
+                  <li className="mb-[10px]">
+                    <p className="content">A well-balanced flavor profile with fruity notes and a hint of peppery finish.</p>
+                  </li>
+                  <li className="mb-[10px]">
+                    <p className="content">Ideal for drizzling over salads, pasta, grilled vegetables, and bread, or as a base for dressings and marinades.</p>
+                  </li>
+                  <li className="mb-[10px]">
+                    <p className="content">Naturally rich in healthy monounsaturated fats and antioxidants, supporting a heart-healthy diet.</p>
+                  </li>
+                  <li className="mb-[10px]">
+                    <p className="content">Non-GMO and gluten-free, making it a wholesome choice for a variety of dietary needs.</p>
+                  </li>
+                </ul>
+                <p className="content mb-[15px] last-of-type:mb-0">Filippo Berio Extra Virgin Olive Oil is a trusted kitchen staple, celebrated by home cooks and professional chefs worldwide for its authenticity and quality.</p>
+
+                <p className="content mb-[15px] last-of-type:mb-0">
+                  Filippo Berio Olive Oil is a versatile, high-quality oil crafted to elevate everyday cooking. It is known for its smooth texture, well-balanced flavor, and golden hue. Whether for sautéing, grilling, frying, or as a base for marinades and sauces, Filippo Berio Olive Oil delivers
+                  consistent performance and enhances the natural flavors of your dishes.
+                </p>
+
+                <p className="content mb-[15px] last-of-type:mb-0">
+                  This oil is made from a blend of premium olives sourced from trusted Mediterranean growers, ensuring authenticity and exceptional taste. Perfect for both home cooks and professional chefs, Filippo Berio Olive Oil is a reliable kitchen staple that brings tradition and excellence to
+                  every meal.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-5 mt-[30px]">
+        <div className="container mx-auto px-5 md:mt-[30px] mt-[20px]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px] md:gap-[30px]">
             <div className="detail-block flex items-center gap-[15px] bg-primaryGreenLight border border-border rounded-[20px] p-[15px]">
-              <span className="w-[50px] h-[50px] bg-white flex items-center justify-center border border-border rounded-[12px]">
-                <img src={HomeIcon} alt="home" />
+              <span className="md:w-[50px] md:h-[50px] w-[40px] h-[40px] bg-white flex items-center justify-center border border-border rounded-[12px]">
+                <img src={HomeIcon} alt="home" className="h-[18px] md:h-[auto]" />
               </span>
               <div className="content">
                 <span className="small-title text-textmute font-normal">Producer</span>
@@ -111,8 +121,8 @@ function index() {
             </div>
 
             <div className="detail-block flex items-center gap-[15px] bg-primaryGreenLight border border-border rounded-[20px] p-[15px]">
-              <span className="w-[50px] h-[50px] bg-white flex items-center justify-center border border-border rounded-[12px]">
-                <img src={LocationIcon} alt="location" />
+              <span className="md:w-[50px] md:h-[50px] w-[40px] h-[40px] bg-white flex items-center justify-center border border-border rounded-[12px]">
+                <img src={LocationIcon} alt="location" className="h-[18px] md:h-[auto]" />
               </span>
               <div className="content">
                 <span className="small-title text-textmute font-normal">Origin</span>
@@ -121,8 +131,8 @@ function index() {
             </div>
 
             <div className="detail-block flex items-center gap-[15px] bg-primaryGreenLight border border-border rounded-[20px] p-[15px]">
-              <span className="w-[50px] h-[50px] bg-white flex items-center justify-center border border-border rounded-[12px]">
-                <img src={DateIcon} alt="date" />
+              <span className="md:w-[50px] md:h-[50px] w-[40px] h-[40px] bg-white flex items-center justify-center border border-border rounded-[12px]">
+                <img src={DateIcon} alt="date" className="h-[18px] md:h-[auto]" />
               </span>
               <div className="content">
                 <span className="small-title text-textmute font-normal">Harvest Date</span>
@@ -131,13 +141,13 @@ function index() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-5 mt-[50px]">
+        <div className="container mx-auto px-5 mt-[30px] md:mt-[50px]">
           <div className="whitespace-nowrap overflow-auto overflow-y-hidden pb-[10px] md:pb-[0] border-b border-border">
-            <ul className="flex gap-[30px]  md:pb-[15px] pb-[10px]">
+            <ul className="flex md:gap-[30px] gap-[20px]  md:pb-[15px] pb-[5px]">
               <li>
                 <a
                   href="javascript:void(0)"
-                  className="link-active relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-17px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
+                  className="link-active relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-16px] md:after:bottom-[-17px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
                 >
                   Nutrition Facts
                 </a>
@@ -145,7 +155,7 @@ function index() {
               <li>
                 <a
                   href="javascript:void(0)"
-                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-17px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
+                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-16px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
                 >
                   Olive Grove
                 </a>
@@ -153,7 +163,7 @@ function index() {
               <li>
                 <a
                   href="javascript:void(0)"
-                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-17px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
+                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-16px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
                 >
                   Production Method
                 </a>
@@ -161,7 +171,7 @@ function index() {
               <li>
                 <a
                   href="javascript:void(0)"
-                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-17px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
+                  className="relative sub-title after:content-[''] after:absolute after:bg-primaryGreen after:w-full after:h-[3px] after:bottom-[-12px] md:after:bottom-[-16px] after:left-0 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300 hover:text-primaryGreen"
                 >
                   Awards or Certifications
                 </a>
@@ -172,7 +182,7 @@ function index() {
           <div className="my-[20px]">
             <p className="content">SALOV S.p.A. (the producer of Filippo Berio) follows traditional and modern methods to produce high-quality olive oil:</p>
             <div className="works-step my-[20px]">
-              <div className="work-step-block flex items-start gap-[8px] last:mb-0 mb-[20px]">
+              <div className="work-step-block flex items-start gap-[8px] last:mb-0 md:mb-[20px] mb-[16px]">
                 <span className="text-primaryGreen small-title">1.</span>
                 <div>
                   <h6 className="small-title">Cold Pressing</h6>
@@ -180,7 +190,7 @@ function index() {
                 </div>
               </div>
 
-              <div className="work-step-block flex items-start gap-[8px] last:mb-0 mb-[20px]">
+              <div className="work-step-block flex items-start gap-[8px] last:mb-0 md:mb-[20px] mb-[16px]">
                 <span className="text-primaryGreen small-title">2.</span>
                 <div>
                   <h6 className="small-title">Mechanical Extraction</h6>
@@ -188,7 +198,7 @@ function index() {
                 </div>
               </div>
 
-              <div className="work-step-block flex items-start gap-[8px] last:mb-0 mb-[20px]">
+              <div className="work-step-block flex items-start gap-[8px] last:mb-0 md:mb-[20px] mb-[16px]">
                 <span className="text-primaryGreen small-title">3.</span>
                 <div>
                   <h6 className="small-title">Blending</h6>
@@ -196,7 +206,7 @@ function index() {
                 </div>
               </div>
 
-              <div className="work-step-block flex items-start gap-[8px] last:mb-0 mb-[20px]">
+              <div className="work-step-block flex items-start gap-[8px] last:mb-0 md:mb-[20px] mb-[16px]">
                 <span className="text-primaryGreen small-title">4.</span>
                 <div>
                   <h6 className="small-title">Filtration</h6>
@@ -204,7 +214,7 @@ function index() {
                 </div>
               </div>
 
-              <div className="work-step-block flex items-start gap-[8px] last:mb-0 mb-[20px]">
+              <div className="work-step-block flex items-start gap-[8px] last:mb-0 md:mb-[20px] mb-[16px]">
                 <span className="text-primaryGreen small-title">5.</span>
                 <div>
                   <h6 className="small-title">Bottling and Packaging</h6>

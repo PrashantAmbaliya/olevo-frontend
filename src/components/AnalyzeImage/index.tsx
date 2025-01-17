@@ -9,7 +9,7 @@ interface Props {
 const analyzeImage: React.FC<Props> = ({ imageUrl }) => {
   return (
     <>
-      {/* <div className="md:w-[40%] w-auto">
+      <div className="md:w-[40%] w-auto">
         <div className="relative w-[100px] h-[100px] mx-auto">
           <div className="loader">
             <img src={imageUrl} alt="Product Image" className="w-[100px] h-[100px] border border-border rounded-full mx-auto" />
@@ -17,9 +17,9 @@ const analyzeImage: React.FC<Props> = ({ imageUrl }) => {
         </div>
         <h6 className="sub-title mb-[10px] mt-[20px] md:mt-[30px]">Loading...</h6>
         <p className="content">Thank you for your patience! We're processing your scan and gathering the product details for you.</p>
-      </div> */}
+      </div>
 
-      <div className="md:w-[40%] w-auto">
+      {/* <div className="md:w-[40%] w-auto">
         <div className="relative w-[100px] h-[100px] mx-auto">
           <div>
             <img src={imageUrl} alt="Product Image" className="w-[100px] h-[100px] border border-border rounded-full mx-auto" />
@@ -43,7 +43,7 @@ const analyzeImage: React.FC<Props> = ({ imageUrl }) => {
             <img src={GreaterThanGreen} alt="camera" className="transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" />
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
