@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from "react";
+import React, { useRef, useState } from "react";
 import Webcam from "react-webcam";
 import AnalyzeImage from '../AnalyzeImage'
 import { TbCapture } from "react-icons/tb";
@@ -48,8 +48,6 @@ const Camera: React.FC<CameraProps> = ({ isCameraOpen }) => {
                     <>
                         <Webcam
                             ref={webcamRef}
-                            height={720}
-                            width={1280}
                             audio={true}
                             screenshotFormat="image/jpeg"
                             videoConstraints={videoConstraints}
@@ -66,7 +64,7 @@ const Camera: React.FC<CameraProps> = ({ isCameraOpen }) => {
                             </button>
                         </div>
                     </>
-                ) : <AnalyzeImage imageUrl={url} />
+                ) : <AnalyzeImage imageUrl={url || ""} />
             }
         </>
     );

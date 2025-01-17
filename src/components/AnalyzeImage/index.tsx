@@ -1,14 +1,14 @@
-import React, { us } from "react";
+import React from "react";
 
-interface analyzeImageProps {
-  imageUrl: boolean;
+interface Props {
+  imageUrl: string;
 }
 
-const analyzeImage: React.FC<analyzeImageProps> = ({ imageUrl }) => {
+const analyzeImage: React.FC<Props> = ({ imageUrl }) => {
   return (
     <>
       <div>
-        <img src="imageUrl" alt="Product Image" />
+        <img src={imageUrl} alt="Product Image" />
       </div>
     </>
   )
