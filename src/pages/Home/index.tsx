@@ -18,7 +18,7 @@ function Index() {
               <Link
                 to="/scan"
                 className="bg-primaryGreen text-white rounded-full inline-flex items-center
-              justify-center text-[14px] lg:text-[16px] gap-[10px] hover:bg-[#3e5e20] transition w-auto font-semibold py-[7px] px-[14px] md:py-[8px] md:px-[15px]  hover:bg-primaryGreenDark"
+              justify-center text-[14px] lg:text-[16px] gap-[10px] hover:bg-[#3e5e20] w-auto font-semibold py-[7px] px-[14px] md:py-[8px] md:px-[15px]  hover:bg-primaryGreenDark transition-all duration-300"
               >
                 <span>Get Started</span>
                 <img src={GreaterThanIcon} alt="Greater Than Icon" />
