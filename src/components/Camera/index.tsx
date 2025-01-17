@@ -1,5 +1,6 @@
 import React, { useRef, useState, useCallback } from "react";
 import Webcam from "react-webcam";
+import AnalyzeImage from '../AnalyzeImage'
 import { TbCapture } from "react-icons/tb";
 import './Camera.css';
 
@@ -17,17 +18,27 @@ const Camera: React.FC<CameraProps> = ({ isCameraOpen }) => {
     const webcamRef = useRef<Webcam | null>(null);
     const [url, setUrl] = useState<string | null | undefined>(null);
 
-    const capturePhoto = useCallback(async () => {
-        if (webcamRef.current) {
-            const imageSrc = webcamRef.current.getScreenshot();
-            console.log("capturePhoto ~ imageSrc:", imageSrc)
-            setUrl(imageSrc || null);
-        }
-    }, []);
-
     const onUserMedia = (e: MediaStream) => {
         console.log(e);
     };
+
+    const HandleCaptureAndUpload = async () => {
+        let ImageData;
+        if (webcamRef.current) {
+            const imageSrc = webcamRef.current.getScreenshot();
+            console.log("capturePhoto ~ imageSrc:", imageSrc)
+            ImageData = imageSrc
+            setUrl(imageSrc || null);
+        }
+
+        try {
+            
+        } catch (error) {
+            
+        } finally {
+
+        }
+    }
 
     return (
         <>
@@ -47,26 +58,15 @@ const Camera: React.FC<CameraProps> = ({ isCameraOpen }) => {
                         />
                         <div className="flex gap-4 justify-center items-center">
                             <button
-                                onClick={capturePhoto}
+                                onClick={HandleCaptureAndUpload}
                                 className=" mt-4 px-6 py-2 bg-[#00A1F2] text-white font-semibold rounded-lg shadow-md hover:bg-[#1f92cc] transition-all duration-300 flex items-center justify-center space-x-2"
                             >
                                 <TbCapture className="text-2xl" />
-                                <span>Capture</span>
+                                <span>Capture and Upload</span>
                             </button>
                         </div>
                     </>
-                ) : <>
-                    <div className="image-container">
-                        <img src={url} alt="Screenshot" className="image" />
-                        <div className="detection-animation"></div>
-                    </div>
-                    <button
-                        onClick={() => setUrl(null)}
-                        className="mt-4 px-6 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition-all duration-300"
-                    >
-                        Refresh
-                    </button>
-                </>
+                ) : <AnalyzeImage imageUrl={url} />
             }
         </>
     );

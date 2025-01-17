@@ -24,19 +24,23 @@ const Scan: FC = () => {
      <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="text-center p-6 bg-white rounded-lg shadow-lg max-w-md w-full">
         {isCameraOpen === false ? (
+
           <div className='flex gap-4 justify-center items-center flex-col'>
+            <p className="mt-4 text-sm text-gray-600">Camera Permission Required</p>
             <button
               onClick={requestCameraPermission}
               className="flex items-center justify-center space-x-2 gap-2 px-10 py-3 bg-[#7E4DF6] text-white font-semibold rounded-lg shadow-md hover:bg-[#9d78f9] transition-all duration-300"
             >
               <IoCameraOutline className="text-2xl" />
-              Open Camera 
+              Allow Camera Access 
             </button>
-            <p className="mt-4 text-sm text-gray-600">Click to request camera access.</p>
           </div>
         ) : hasPermission ? (
+
           <Camera isCameraOpen={isCameraOpen} />
+
         ) : (
+
           <div>
             <p className="text-red-500 font-semibold">
               Permission to access camera is denied.
@@ -49,6 +53,7 @@ const Scan: FC = () => {
               Try Again
             </button>
           </div>
+          
         )}
       </div>
     </div>
