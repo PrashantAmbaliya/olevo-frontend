@@ -27,4 +27,70 @@
     @apply text-[14px] lg:text-[16px];
     @apply leading-[20px] lg:leading-[22px];
   }
+
+  .title {
+    @apply font-semibold text-primaryBlack;
+    @apply text-[22px] md:text-[28px] lg:text-[34px];
+    @apply leading-[28px] md:leading-[26px] lg:leading-[40px];
+  }
+}
+
+.camera-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000c7;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-success {
+  background-color: #f6f8f4;
+}
+.bg-warning {
+  background-color: #fbf4f4;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 120px;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 4px solid #507623;
+  border-right: 4px solid #507623;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
 }

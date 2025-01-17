@@ -1,9 +1,10 @@
-import React from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import React from "react"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
-import Scan from './pages/Scan';
-import Home from './pages/Home'
-import Layout from './components/Layout';
+import Scan from "./pages/Scan"
+import Home from "./pages/Home"
+import Layout from "./components/Layout"
+import Details from "./pages/Details"
 
 const router = createBrowserRouter([
   {
@@ -18,13 +19,16 @@ const router = createBrowserRouter([
         path: "scan",
         element: <Scan />,
       },
+      {
+        path: "details",
+        element: <Details />,
+      },
     ],
   },
-]);
-
+])
 
 const Routing: React.FC = () => {
-  return <RouterProvider router={router} />;
-};
+  return <RouterProvider router={router} />
+}
 
-export default Routing;
+export default Routing
