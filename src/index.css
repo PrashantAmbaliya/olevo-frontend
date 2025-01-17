@@ -1,12 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-      font-family: 'Outfit', sans-serif;
-    }
+  body {
+    font-family: "Outfit", sans-serif;
   }
+}
+
+@layer components {
+  .content {
+    @apply font-normal text-textmute;
+    @apply text-[14px] lg:text-[16px];
+    @apply leading-[20px] lg:leading-[22px];
+  }
+  .sub-title {
+    @apply font-semibold text-primaryBlack;
+    @apply text-[18px] lg:text-[20px];
+    @apply leading-[24px] lg:leading-[26px];
+  }
+
+  .small-title {
+    @apply font-semibold text-primaryBlack;
+    @apply text-[14px] lg:text-[16px];
+    @apply leading-[20px] lg:leading-[22px];
+  }
+}
